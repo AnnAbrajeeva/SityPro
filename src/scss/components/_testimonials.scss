@@ -1,0 +1,27 @@
+.testimonials {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    @include flex-v-center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__img {
+    width: 63px;
+    height: 63px;
+    margin-bottom: 18px;
+  }
+
+  &__descr {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--dark-color);
+  }
+}
