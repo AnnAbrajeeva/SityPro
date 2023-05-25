@@ -3,7 +3,7 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-import { swiperHero } from "./components/slider-hero";
+import { swiperHero, swiperPortfolio } from "./components/sliders";
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';

@@ -1,0 +1,68 @@
+.portfolio {
+  &__title {
+    max-width: 400px;
+    line-height: 90%;
+    padding-top: 6px;
+  }
+}
+
+.portfolio-slider {
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 33px;
+  }
+
+  &__img {
+    padding-top: 45px;
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 397px;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    padding-bottom: 8px;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 330px;
+    z-index: 5;
+
+    .swiper-pagination-current {
+      font-weight: 700;
+      font-size: 85px;
+      line-height: 90.5%;
+      letter-spacing: 0.01em;
+      color: #333132;
+    }
+
+    .swiper-pagination-total {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 90.5%;
+      letter-spacing: 0.01em;
+      color: #333132;
+    }
+  }
+
+  &__pag {
+    position: relative;
+    font-weight: 700;
+    font-size: 50px;
+  }
+
+  &__arrow {
+    display: block;
+    width: 80px;
+    cursor: pointer;
+  }
+}
