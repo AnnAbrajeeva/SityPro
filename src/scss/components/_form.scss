@@ -1,0 +1,12 @@
+.form-section {
+  padding-bottom: 100px;
+  &__title {
+    max-width: 300px;
+    margin-bottom: 58px;
+    line-height: 90%;
+  }
+
+  &__check {
+    margin-top: -8px;
+  }
+}
