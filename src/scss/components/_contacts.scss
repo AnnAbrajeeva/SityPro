@@ -1,0 +1,83 @@
+.contacts {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-style: normal;
+  }
+
+  &__polit {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #8c8c8c;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+  }
+
+  &__social {
+    margin-bottom: 25px;
+  }
+}
+
+.contact {
+  &:not(:last-child) {
+    margin-bottom: 19px;
+  }
+
+  &__img {
+    @include flex-all-center;
+
+    width: 30px;
+    height: 30px;
+    background: #73a56c;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--dark-color);
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--dark-color);
+
+    &--underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
