@@ -30,6 +30,18 @@
   flex-direction: column;
   transition: all 0.3s ease;
 
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: 0.3s;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -40,6 +52,21 @@
     left: 0;
     right: 0;
     background: linear-gradient(180deg, rgba(0, 102, 255, 0) 31%, #000000 100%);
+    z-index: 1;
+    transition: 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #00A386;
+    opacity: 0.3;
     z-index: 2;
     transition: 0.3s;
   }
@@ -48,12 +75,13 @@
     .service__hidden {
       bottom: 0;
     }
-    &:before {
+    &:after {
       background: linear-gradient(
         180deg,
         rgba(0, 102, 255, 0.4) 31%,
         #000000 100%
       );
+      opacity: 1;
       transition: 0.3s;
     }
     .service__arrow {
