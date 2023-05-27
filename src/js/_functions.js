@@ -65,8 +65,10 @@ import { swiperHero, swiperPortfolio } from "./components/sliders";
 // const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
+import SmoothScroll from 'smooth-scroll';
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';

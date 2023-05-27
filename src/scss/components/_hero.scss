@@ -106,14 +106,12 @@
 
   &__btn {
     margin-bottom: 50px;
-    background: linear-gradient(88deg, #0041a4 3.4%, #00a386 98.93%);
+    background: #00a386;
     box-shadow: 0px 10px 50px rgba(0, 221, 185, 0.25);
     border: none;
-    transition: all 0.3s ease-in-out;
 
     &:hover {
-      transform: scale(0.950);
-      background: linear-gradient(-88deg, #0041a4 3.4%, #00a386 98.93%);
+      background: var(--darkBlue-color);
     }
   }
 }
