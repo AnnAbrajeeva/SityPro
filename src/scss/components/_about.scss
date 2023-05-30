@@ -1,6 +1,10 @@
 .about {
   margin-bottom: 97px;
 
+  @include tablet {
+    margin-bottom: 0;
+  }
+
   &__container {
     position: relative;
   }

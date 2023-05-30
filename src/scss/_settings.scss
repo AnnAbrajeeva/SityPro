@@ -124,6 +124,10 @@ a {
   line-height: 85%;
   color: #465067;
   text-transform: uppercase;
+
+  @include tablet {
+    text-align: center;
+  }
 }
 
 .burger {

@@ -6,10 +6,6 @@
   transform: translateX(-50%);
   z-index: 11;
 
-  @include small-desktop {
-    top: 0;
-  }
-
   &__wrapper {
     position: relative;
     @include flex-v-center;
