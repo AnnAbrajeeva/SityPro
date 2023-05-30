@@ -78,23 +78,28 @@
   }
 
   &__arrow {
-    @include flex-all-center;
-
-    position: absolute;
-    right: -27px;
-    bottom: 316px;
+    display: none;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
     width: 152px;
     height: 152px;
     border-radius: 100%;
     background: #79aeff;
+    transition: opacity 0.5s ease;
 
     &:hover {
-      animation-name: up;
-      animation-duration: 0.7s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in;
+      opacity: 0.4;
+    }
+
+    &__arrow--show {
+      display: flex;
     }
   }
+}
+
+.show {
+  @include flex-all-center;
 }
 
 .info {
@@ -115,17 +120,5 @@
     font-size: 16px;
     line-height: 19px;
     color: #272727;
-  }
-}
-
-@keyframes up {
-  0% {
-    bottom: 316px;
-  }
-  50% {
-    bottom: 330px;
-  }
-  to {
-    bottom: 316px;
   }
 }

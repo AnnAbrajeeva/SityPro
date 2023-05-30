@@ -126,6 +126,10 @@ a {
   text-transform: uppercase;
 }
 
+.burger {
+  @include burger
+}
+
 .form {
   display: flex;
   flex-wrap: wrap;
@@ -181,6 +185,7 @@ a {
 
   &__custom-check {
     @include flex-all-center;
+    flex-shrink: 0;
     margin-right: 10px;
     width: 40px;
     height: 40px;

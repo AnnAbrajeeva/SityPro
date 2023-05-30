@@ -12,6 +12,11 @@
     padding: 22px 70px;
     background: var(--light-color);
     border-radius: 15px;
+
+    @include small-desktop {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__logo {
@@ -28,6 +33,16 @@
 
   &__nav {
     margin-right: 39px;
+
+    @include small-desktop {
+      display: none;
+    }
+  }
+
+  &__contact {
+    @include small-desktop {
+      display: none;
+    }
   }
 }
 

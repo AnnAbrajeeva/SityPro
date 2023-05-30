@@ -33,6 +33,9 @@ import { swiperHero, swiperPortfolio } from "./components/sliders";
 // import GraphModal from 'graph-modal';
 // const modal = new GraphModal();
 
+import openModal from "./components/modal";
+openModal();
+
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
 // const tabs = new GraphTabs('tab');
@@ -66,9 +69,13 @@ import { swiperHero, swiperPortfolio } from "./components/sliders";
 
 // Подключение плавной прокрутки к якорям
 import SmoothScroll from 'smooth-scroll';
+import { document } from "postcss";
 const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000
 });
+
+import scrollUp from "./components/scrollUp";
+scrollUp();
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
