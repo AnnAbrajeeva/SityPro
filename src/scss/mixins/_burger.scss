@@ -5,7 +5,8 @@
   --burger-height: 26px;
   --burger-line-height: 2px;
 
-  position: relative;
+  position: absolute;
+  right: 70px;
   display: none;
   border: none;
   padding: 0;
@@ -17,6 +18,7 @@
 
   @include small-desktop {
     display: block;
+    position: fixed;
   }
 
   &::before,
@@ -50,6 +52,13 @@
   }
 
   &--active {
+
+    @include small-desktop {
+      top: 18px;
+      right: 26px;
+      z-index: 10;
+    }
+
     &::before {
       top: 50%;
       transform: rotate(45deg);
