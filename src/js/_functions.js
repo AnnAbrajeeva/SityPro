@@ -33,8 +33,7 @@ import { swiperHero, swiperPortfolio, swiperServices, swiperPortfolioTablet } fr
 // import GraphModal from 'graph-modal';
 // const modal = new GraphModal();
 
-import openModal from "./components/modal";
-openModal();
+
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
@@ -74,8 +73,7 @@ const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000
 });
 
-import scrollUp from "./components/scrollUp";
-scrollUp();
+
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
