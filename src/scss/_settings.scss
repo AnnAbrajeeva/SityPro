@@ -82,6 +82,10 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include mobile {
+    padding: 0 20px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -128,10 +132,18 @@ a {
   @include tablet {
     text-align: center;
   }
+
+  @include mobile {
+    font-size: 35px;
+  }
 }
 
 .burger {
   @include burger
+}
+
+.hide {
+  display: none;
 }
 
 .form {
@@ -163,6 +175,10 @@ a {
     border: none;
     background: #ffffff;
     border-radius: 15px;
+
+    @media (max-width: 721px) {
+      margin-top: 0;
+    }
   }
 
   &__check {

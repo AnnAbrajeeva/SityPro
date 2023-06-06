@@ -6,6 +6,19 @@
   transform: translateX(-50%);
   z-index: 11;
 
+  @include small-desktop {
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .container {
+    @include small-desktop {
+      padding: 0;
+    }
+  }
+
   &__wrapper {
     position: relative;
     @include flex-v-center;
@@ -16,6 +29,11 @@
     @include small-desktop {
       display: flex;
       justify-content: space-between;
+      border-radius: 0px 0px 20px 20px;
+    }
+
+    @include mobile {
+      padding: 16px 20px;
     }
   }
 
@@ -23,6 +41,11 @@
     width: 100px;
     height: 36px;
     margin-right: 84px;
+
+    @include mobile {
+      width: 80px;
+      height: 29px;
+    }
 
     img {
       width: 100%;

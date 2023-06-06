@@ -18,7 +18,11 @@
 
   @include small-desktop {
     display: block;
-    position: fixed;
+    // position: fixed;
+  }
+
+  @include mobile {
+    right: 20px;
   }
 
   &::before,

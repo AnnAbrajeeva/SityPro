@@ -10,6 +10,10 @@
     background-color: #e8e8e8;
   }
 
+  @include mobile {
+    margin-bottom: 0;
+  }
+
   &__container {
     position: relative;
     max-width: 1034px;
@@ -60,8 +64,30 @@
   }
 
   &__content {
+    position: relative;
     max-width: 1034px;
     margin: 189px auto 0;
+
+    &::before {
+      display: none;
+      content: "";
+      position: absolute;
+      background: url("../img/fig2.svg") center center/cover no-repeat;
+      width: 560px;
+      height: 500px;
+      top: -159px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include mobile {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      margin: 151px auto 0;
+    }
   }
 
   &__wrapper {
@@ -75,6 +101,10 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+    }
+
+    @include tablet {
+      width: 100%;
     }
   }
 
@@ -92,12 +122,29 @@
       order: 2;
       margin-bottom: 20px;
     }
+
+    @include mobile {
+      font-size: 25px;
+      line-height: 25px;
+      width: 280px;
+      margin-bottom: 0;
+    }
   }
 
   &__circle {
     position: absolute;
     top: 0;
     right: 0;
+
+    @include small-tablet {
+      top: 100px;
+    }
+
+    @include mobile {
+      display: none;
+      width: 540px;
+      top: 90px;
+    }
   }
 
   &__img {
@@ -110,6 +157,10 @@
       margin-bottom: 20px;
     }
 
+    @include mobile {
+      width: 258px;
+    }
+
     &--slide1 {
       margin-top: -40px;
       right: -30px;
@@ -117,10 +168,18 @@
 
     &--slide2 {
       right: 20px;
+
+      @include tablet {
+        right: 0;
+      }
     }
 
     &--slide3 {
       right: 20px;
+
+      @include tablet {
+        right: 0;
+      }
     }
 
     img {
@@ -138,6 +197,10 @@
 
     @include small-desktop {
       margin-bottom: 50px;
+    }
+
+    @include mobile {
+      width: 100%;
     }
 
     &:hover {
@@ -181,6 +244,13 @@
     @include small-desktop {
       width: 270px;
       margin: 0 auto;
+    }
+
+    @include mobile {
+      @include flex-all-center;
+
+      flex-direction: column;
+      width: 100%;
     }
   }
 
