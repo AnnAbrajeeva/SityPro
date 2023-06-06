@@ -11,6 +11,10 @@
     padding: 30px 50px 31px;
     background: #ffffff;
     border-radius: 20px 20px 0px 0px;
+
+    @media (max-width: 684px) {
+      padding: 15px;
+    }
   }
 
   &__header {
@@ -19,6 +23,14 @@
 
   &__logo {
     width: 259px;
+
+    @include small-tablet {
+      width: 150px;
+    }
+
+    @media (max-width: 684px) {
+      width: 80px;
+    }
 
     img {
       width: 100%;
@@ -43,6 +55,18 @@
     &:hover {
       opacity: 1;
     }
+
+    @include small-tablet {
+      top: 30px;
+      right: 30px;
+    }
+
+    @media (max-width: 684px) {
+      width: 40px;
+      height: 40px;
+      top: 15px;
+      right: 15px;
+    }
   }
 }
 
@@ -51,9 +75,21 @@
   justify-content: start;
   padding: 56px 50px 68px;
 
+  @media (max-width: 684px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
   &__descr {
     max-width: 348px;
     margin-right: 52px;
+
+    @media (max-width: 684px) {
+      max-width: none;
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -64,6 +100,16 @@
     line-height: 100%;
     text-transform: uppercase;
     color: #465067;
+
+    @include small-tablet {
+      font-size: 45px;
+    }
+
+    @media (max-width: 684px) {
+      font-size: 35px;
+      line-height: 85%;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -71,11 +117,44 @@
     font-size: 30px;
     line-height: 36px;
     color: #272727;
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    @media (max-width: 684px) {
+      display: block;
+      font-size: 18px;
+      line-height: 17px;
+      margin-bottom: 20px;
+    }
   }
 
   &__form {
+    .form {
+      @media (max-width: 684px) {
+        gap: 10px;
+      }
+    }
+    .form__input {
+      @media (max-width: 684px) {
+        padding: 15px;
+      }
+    }
     .form__textarea {
       margin: 0;
+
+      @media (max-width: 684px) {
+        padding: 15px;
+        height: 120px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .form__input-text {
+      @media (max-width: 684px) {
+        font-size: 12px;
+      }
     }
 
     .form__btn {

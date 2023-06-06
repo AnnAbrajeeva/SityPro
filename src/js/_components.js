@@ -8,3 +8,7 @@ scrollUp();
 
 import toggleMenu from "./components/burger";
 toggleMenu();
+
+
+import openAboutSection from "./components/about";
+openAboutSection();

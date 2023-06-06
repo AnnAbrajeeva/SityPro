@@ -42,6 +42,14 @@
           rgba(232, 232, 232, 0.649585) 100%
         );
       }
+
+      &--open {
+        padding-bottom: 20px;
+        
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 
