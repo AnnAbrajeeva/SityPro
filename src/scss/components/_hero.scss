@@ -132,11 +132,13 @@
 
   &__circle {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -123px;
+    right: -249px;
+    // top: 0;
+    // right: 0;
 
-    @include small-tablet {
-      top: 100px;
+    @media (max-width: 1187px) {
+      right: 0;
     }
 
     @include mobile {

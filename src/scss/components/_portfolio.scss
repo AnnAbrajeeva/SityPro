@@ -153,9 +153,16 @@
     }
   }
 
+
   &__pag {
     font-weight: 700;
     font-size: 50px;
+    width: max-content;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
   }
 
   &__pag-min {
@@ -228,5 +235,10 @@
     display: block;
     width: 80px;
     cursor: pointer;
+    z-index: 10;
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+    }
   }
 }

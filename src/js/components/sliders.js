@@ -12,7 +12,7 @@ const swiperHero = new Swiper(".hero__slider", {
 
 const swiperPortfolio = new Swiper(".portfolio__slider", {
   slidesPerView: 1,
-  loop: true,
+  loop: false,
   modules: [Pagination, Navigation],
   pagination: {
     el: ".portfolio-slider__pag",
