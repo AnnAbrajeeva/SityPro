@@ -1,33 +1,71 @@
-<header class="header">
+<header id="header" class="header">
   <div class="container">
     <div class="header__wrapper">
-      <div class="header__logo">
+      <a href="/" class="header__logo">
         <img src="../img/logo.svg" alt="Sity Pro" />
-      </div>
+      </a>
       <nav class="header__nav navigation" aria-label="Навигация">
         <ul class="navigation__list list-reset">
           <li class="navigation__item">
-            <a href="#" class="navigation__link">О нас</a>
+            <a data-scroll href="index.html#about" class="navigation__link">О нас</a>
           </li>
 
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Виды услуг</a>
+            <a data-scroll href="index.html#services" class="navigation__link">Виды услуг</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Портфолио</a>
+            <a data-scroll href="index.html#portfolio" class="navigation__link">Портфолио</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Оставьте заявку</a>
+            <a data-scroll href="index.html#form" class="navigation__link">Оставьте заявку</a>
           </li>
           <li class="navigation__item">
-            <a href="#" class="navigation__link">Контакты</a>
+            <a data-scroll href="index.html#contacts" class="navigation__link">Контакты</a>
           </li>
         </ul>
       </nav>
       <div class="header__contact">
-        <a href="tel:+79000000000" class="contact-link contact-link--phone">
-          <span class="contact-link__caption">+7<nbsp /> 900 000 00 00</span>
+        <a href="tel:+74951975797" class="contact-link contact-link--phone">
+          <span class="contact-link__caption"> +7 495 197 57 97</span>
         </a>
+      </div>
+      <button class="btn-reset burger">
+        <span class="burger__line"></span>
+      </button>
+      <div class="mobile-menu">
+        <a href="/" class="header__logo">
+          <img src="../img/logo.svg" alt="Sity Pro" />
+        </a>
+        <nav class="header__nav navigation" aria-label="Навигация">
+          <ul class="navigation__list list-reset">
+            <li class="navigation__item">
+              <a data-scroll href="index.html#about" class="navigation__link">О нас</a>
+            </li>
+
+            <li class="navigation__item">
+              <a data-scroll href="index.html#services" class="navigation__link">Виды услуг</a>
+            </li>
+            <li class="navigation__item">
+              <a data-scroll href="index.html#portfolio" class="navigation__link">Портфолио</a>
+            </li>
+            <li class="navigation__item">
+              <a data-scroll href="index.html#form" class="navigation__link">Оставьте заявку</a>
+            </li>
+            <li class="navigation__item">
+              <a data-scroll href="index.html#contacts" class="navigation__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contacts__social social">
+          <a href="#" class="social__link"><img src="img/vk.svg" alt="vk" /></a>
+          <a href="#" class="social__link"><img src="img/tg.svg" alt="vk" /></a>
+          <a href="#" class="social__link"
+            ><img src="img/contact3.svg" alt="vk"
+          /></a>
+          <a href="#" class="social__link"
+            ><img src="img/contact4.svg" alt="vk"
+          /></a>
+        </div>
       </div>
     </div>
   </div>

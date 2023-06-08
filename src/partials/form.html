@@ -1,0 +1,66 @@
+<section id="form" class="form-section block">
+  <div class="container form-section__container">
+    <img
+      src="img/form-bg.png"
+      alt="folder"
+      class="block__bg form-section__bg"
+    />
+    <div class="form-section__wrapper block__wrapper">
+      <h2 class="form-section__title title">Оставьте заявку</h2>
+      <form class="form-section__form form" novalidate="novalidate">
+        <div class="form__input-wrapper">
+          <div class="form__control-wrapper">
+            <label for="name">
+              <input
+                class="form-section__input form__input"
+                placeholder="Ваше имя"
+                type="text"
+                id="name"
+                data-name="validate-name"
+            /></label>
+          </div>
+
+          <div class="form__control-wrapper">
+            <label for="phone">
+              <input
+                class="form-section__input form__input"
+                type="tel"
+                name="phone"
+                placeholder="Номер телефона*"
+                id="phone"
+                data-phone="validate-phone"
+            /></label>
+          </div>
+        </div>
+
+        <textarea class="form-section__textarea form__textarea" name="message">
+          Ваше сообщение
+        </textarea>
+        <div class="form__control-wrapper">
+          <div class="form-section__check">
+            <label class="form__label">
+              <input
+                class="form-section__input form__input-check"
+                type="checkbox"
+                name="agree"
+                id="check"
+                data-check="validate-check"
+              />
+              <div class="form__custom-check">
+                <img class="form__custom-img" src="img/check.svg" alt="check" />
+              </div>
+              <span class="form__input-text"
+                >Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь на обработку ваших
+                данных</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <button class="form-section__btn btn form__btn" type="submit">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

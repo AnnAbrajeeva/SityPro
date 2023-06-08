@@ -82,6 +82,10 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include mobile {
+    padding: 0 20px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -113,4 +117,146 @@ a {
   color: var(--light-color);
   padding: 22px 42px 18px;
   border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 85%;
+  color: #465067;
+  text-transform: uppercase;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include mobile {
+    font-size: 35px;
+  }
+}
+
+.burger {
+  @include burger
+}
+
+.hide {
+  display: none !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__control-wrapper {
+    position: relative;
+    flex-grow: 1;
+
+  }
+
+  &__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__input {
+    padding: 24px 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #878787;
+    border: none;
+    background: #ffffff;
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  &__textarea {
+    margin-top: 30px;
+    width: 100%;
+    height: 200px;
+    padding: 20px 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #878787;
+    border: none;
+    background: #ffffff;
+    border-radius: 15px;
+
+    @media (max-width: 721px) {
+      margin-top: 0;
+    }
+  }
+
+  &__check {
+    @include flex-all-center;
+    width: 100%;
+  }
+
+  &__input-check {
+    visibility: hidden;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+
+    &:checked + .form__custom-check > .form__custom-img {
+      display: block;
+    }
+  }
+
+  &__label {
+    position: relative;
+    @include flex-all-center;
+  }
+
+  &__custom-check {
+    @include flex-all-center;
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+  &__custom-img {
+    display: none;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #272727;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    width: 270px;
+    border: none;
+    background: #73a56c;
+    border: 2px solid transparent;
+    border-radius: 15px;
+
+    &:hover {
+      border: 2px solid #73a56c;
+      background: transparent;
+      color: #73a56c;
+    }
+  }
+
+  .just-validate-error-label {
+    position: relative;
+    top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
 }
