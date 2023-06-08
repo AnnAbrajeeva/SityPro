@@ -148,12 +148,21 @@ a {
 
 .form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
 
   &__control-wrapper {
     position: relative;
     flex-grow: 1;
+
+  }
+
+  &__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
   &__input {
