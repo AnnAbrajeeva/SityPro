@@ -1,4 +1,4 @@
-# Gulp - сборка MaxGraph
+# SityPro
 
 Адаптивная Pixel Perfect верстка сайта по макету из Figma
 
