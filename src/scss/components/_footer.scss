@@ -114,6 +114,15 @@
     border-radius: 100%;
     background: #79aeff;
     transition: opacity 0.5s ease;
+    z-index: 20;
+
+    @include tablet {
+      & {
+        width: 80px;
+        right: 20px;
+        bottom: 20px;
+      }
+    }
 
     img {
       width: 100%;

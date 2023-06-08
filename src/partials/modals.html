@@ -27,25 +27,45 @@
         >
       </div>
       <div class="content__form">
-        <form class="form">
-          <input placeholder="Иван Иванов" class="form__input" />
-          <input
-            type="tel"
-            placeholder="+7 999 999 99 99"
-            class="form__input"
-          />
+        <form class="form modal__form">
+          <div class="form__control-wrapper">
+            <input
+              data-name="validate-name"
+              placeholder="Иван Иванов"
+              class="form__input"
+            />
+          </div>
+          <div class="form__control-wrapper">
+            <input
+              type="tel"
+              placeholder="+7 999 999 99 99"
+              class="form__input"
+              data-phone="validate-phone"
+            />
+          </div>
           <textarea class="form__textarea">Текстовое сообщение </textarea>
-          <div class="form-section__check form__check">
-            <label class="form__label">
-              <input class="form__input-check" type="checkbox" name="agree" />
-              <div class="form__custom-check">
-                <img class="form__custom-img" src="img/check.svg" alt="check" />
-              </div>
-              <span class="form__input-text"
-                >Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь на обработку ваших
-                данных</span
-              >
-            </label>
+          <div class="form__control-wrapper">
+            <div class="form-section__check">
+              <label class="form__label">
+                <input
+                  class="form__input-check"
+                  type="checkbox"
+                  name="agree"
+                  data-check="validate-check"
+                />
+                <div class="form__custom-check">
+                  <img
+                    class="form__custom-img"
+                    src="img/check.svg"
+                    alt="check"
+                  />
+                </div>
+                <span class="form__input-text"
+                  >Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь на обработку ваших
+                  данных</span
+                >
+              </label>
+            </div>
           </div>
           <button class="btn form__btn" type="submit">Отправить</button>
         </form>

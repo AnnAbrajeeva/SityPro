@@ -4,7 +4,6 @@ const content = document.querySelector('.about__content')
 
 function openAboutSection() {
   arrow.addEventListener("click", () => {
-    hiddenContent.classList.remove("hide");
     arrow.classList.add('hide');
     content.classList.add('about__content--open');
   });

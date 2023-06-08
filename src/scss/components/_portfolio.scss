@@ -1,5 +1,6 @@
 .portfolio {
   position: relative;
+
   @include small-desktop {
     background-color: var(--lightGrey-color);
   }
@@ -18,6 +19,12 @@
 
     margin-bottom: 100px;
     border-radius: 20px;
+  }
+
+  &__bg {
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
 
   &__wrapper {

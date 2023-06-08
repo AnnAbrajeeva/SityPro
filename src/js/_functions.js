@@ -3,7 +3,12 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-import { swiperHero, swiperPortfolio, swiperServices, swiperPortfolioTablet } from "./components/sliders";
+import {
+  swiperHero,
+  swiperPortfolio,
+  swiperServices,
+  swiperPortfolioTablet,
+} from "./components/sliders";
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -32,8 +37,6 @@ import { swiperHero, swiperPortfolio, swiperServices, swiperPortfolioTablet } fr
 // Реализация модального окна
 // import GraphModal from 'graph-modal';
 // const modal = new GraphModal();
-
-
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';
@@ -67,13 +70,10 @@ import { swiperHero, swiperPortfolio, swiperServices, swiperPortfolioTablet } fr
 // const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
-import SmoothScroll from 'smooth-scroll';
-import { document } from "postcss";
+import SmoothScroll from "smooth-scroll";
 const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000
+  speed: 1000,
 });
-
-
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
@@ -83,11 +83,47 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
-// const rules1 = [...];
+import { validateForms } from "./functions/validate-forms";
+const rules1 = [
+  {
+    ruleSelector: "[data-name='validate-name']",
+    rules: [
+      {
+        rule: "required",
+        errorMessage: "Введите Ваше имя"
+      },
+      {
+        rule: "minLength",
+        value: 3,
+        errorMessage: "Имя не должно быть меньше 3 букв"
+      },
+    ],
+  },
+  {
+    ruleSelector: "[data-phone='validate-phone']",
+    rules: [
+      {
+        rule: "required",
+        errorMessage: "Введите, пожалуйста, Ваш номер"
+      },
+    ],
+  },
+  {
+    ruleSelector: "[data-check='validate-check']",
+    rules: [
+      {
+        rule: "required",
+        errorMessage: "Требуется Ваше согласие"
+      },
+    ],
+  },
+];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
 
-// validateForms('.form-1', rules1, afterForm);
+
+const afterForm = () => {
+  console.log("Произошла отправка, тут можно писать любые действия");
+};
+
+validateForms(".form-section__form", rules1, afterForm);
+validateForms(".modal__form", rules1, afterForm);
